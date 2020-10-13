@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+  <div id="product" class="col-lg-9 mx-auto">
+    <div class="row m-auto mt-3">
+      {% for category in categories %}
+      <div class="card mx-auto" style="width: 18rem;">
+        <img class="card-img-top" src="{{ category.image.url }}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-title">{{ category.name }}</p>
+          <p class="card-text"><b>{{ category.price }}</b></p>
+          <a href="#" class="btn btn-light border btn-sm">Add To Cart</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

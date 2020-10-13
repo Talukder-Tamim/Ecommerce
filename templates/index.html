@@ -5,11 +5,11 @@
 <div class="row">
 
   <div class="col-lg-3 mx-auto">
+    {% for category in categories %}
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action active">Active item</a>
-      <a href="#" class="list-group-item list-group-item-action">Item</a>
-      <a href="#" class="list-group-item list-group-item-action disabled">Disabled item</a>
+      <a href="{% url 'category-post' category.name %}" class="list-group-item list-group-item-action active">{{ category.name }}</a>
     </div>
+    {% endfor %}
   </div>
 
   <div id="product" class="col-lg-9 mx-auto">
